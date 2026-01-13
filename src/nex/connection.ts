@@ -106,7 +106,6 @@ export default class Connection {
 				if (packet.version === 0) {
 					for (const title of titles) {
 						if (title.titleIDs.includes(settings.fallbackTid())) {
-							console.log('rb2 found');
 							const expectedChecksum = packet.checksum;
 							const calculatedChecksum = packet.calculateChecksum(title.accessKey);
 
